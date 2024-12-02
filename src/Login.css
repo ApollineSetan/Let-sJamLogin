@@ -1,0 +1,65 @@
+/* src/Login.css */
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 40px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button.submit-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #5ca2ec;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.submit-btn:hover {
+  background-color: #0036b3;
+}
+
+.toggle-action {
+  margin-top: 20px;
+}
+
+.toggle-action p {
+  color: #007bff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.toggle-action p:hover {
+  text-decoration: underline;
+}
