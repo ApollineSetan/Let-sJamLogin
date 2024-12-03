@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato';
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: #000D26;
+  }
+  
+  .home-page {
+    display: flex;
+    width: 100%;
+    position: relative;
+  }
+  
+  /* Barre de recherche centrée */
+  .search-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    z-index: 10;
+    padding: 10px 20px;
+    gap: 10px; /* Espace entre les éléments */
+  }
+  
+  .search-bar input {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    background-color: transparent; /* Pas de fond */
+    color: #333;
+  }
+  
+  .search-bar input:focus {
+    border-color: #007bff;
+  }
+  
+  /* Bouton flèche retour */
+  .back-button {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .back-button ion-icon {
+    font-size: 24px;
+  }
+  
+  /* Bouton notification */
+  .notification-button {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .notification-button ion-icon {
+    font-size: 24px;
+  }
+  
+  /* Sidebar gauche */
+  .sidebar {
+    width: 200px;
+    background-color: #007bff;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .left-sidebar {
+    left: 0;
+  }
+  
+  .right-sidebar {
+    right: 0;
+  }
+  
+  /* Liens dans la sidebar */
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin: 20px 0;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .sidebar li:hover {
+    text-decoration: underline;
+  }
+  
+  /* Séparation des liens en haut et en bas */
+  .top-links {
+    margin-bottom: 40px; /* Espacement entre les deux sections */
+  }
+  
+  .bottom-links {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+  
+  .bottom-links ul {
+    margin-top: auto; /* Place les liens en bas */
+  }
+  
+  .bottom-links li {
+    margin-bottom: 10px;
+  }
+  
+  /* Contenu principal */
+  .main-content {
+    margin: 60px 220px; /* Gère l'espacement avec les sidebars */
+    padding: 20px;
+    width: calc(100% - 440px); /* Réduit la largeur pour tenir compte des 2 sidebars */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .main-content p {
+    color: #666;
+    line-height: 1.6;
+  }
