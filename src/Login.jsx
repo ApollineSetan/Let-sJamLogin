@@ -49,60 +49,65 @@ function Login() {
   };
 
   return (
-    <div className="login-container">
-      <h2>{isLogin ? 'Se connecter' : 'S\'inscrire'}</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="input-group">
-          <span className="icon"><ion-icon name="mail"></ion-icon></span>
-          <input
-            type="email"
-            id="email"
-            placeholder=" "
-            value={email}
-            onChange={handleEmailChange}
-            onKeyUp={validateFields}
-            required={!isLogin} // L'email est obligatoire uniquement en mode inscription
-          />
-          <label>Email</label>
-          {emailError && !isLogin && <span className="error-message">Email invalide</span>}
-        </div>
-        <div className="input-group">
-          <span className="icon"><ion-icon name="lock-open"></ion-icon></span>
-          <input
-            type="password"
-            id="password"
-            placeholder=" "
-            value={password}
-            onChange={handlePasswordChange}
-            onKeyUp={validateFields}
-            required={!isLogin} // Le mot de passe est obligatoire uniquement en mode inscription
-          />
-          <label>Mot de passe</label>
-          {passwordError && !isLogin && <span className="error-message">Le mot de passe doit contenir au moins un chiffre et un caractère spécial</span>}
-        </div>
-        {isLogin && (
-          <div className="login-options">
-            <div className="remember-me">
-              <input
-                type="checkbox"
-                id="rememberMe"
-                checked={rememberMe}
-                onChange={handleRememberMeChange}
-              />
-              <label htmlFor="rememberMe">Se souvenir ?</label>
-            </div>
-              <a href="#" className='forgot-password'>Mot de passe oublié ?</a>
+    <div>
+      <div className="login-container">
+        <h2>{isLogin ? 'Se connecter' : 'S\'inscrire'}</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="input-group">
+            <span className="icon"><ion-icon name="mail"></ion-icon></span>
+            <input
+              type="email"
+              id="email"
+              placeholder=" "
+              value={email}
+              onChange={handleEmailChange}
+              onKeyUp={validateFields}
+              required={!isLogin} // L'email est obligatoire uniquement en mode inscription
+            />
+            <label>Email</label>
+            {emailError && !isLogin && <span className="error-message">Email invalide</span>}
           </div>
-        )}
-        <button type="submit" className="submit-btn">
-          {isLogin ? 'Se connecter' : 'S\'inscrire'}
-        </button>
-      </form>
-      <div className="toggle-action">
-        <p onClick={() => setIsLogin(!isLogin)}>
-          {isLogin ? 'Pas encore de compte ? S\'inscrire' : 'Déjà un compte ? Se connecter'}
-        </p>
+          <div className="input-group">
+            <span className="icon"><ion-icon name="lock-open"></ion-icon></span>
+            <input
+              type="password"
+              id="password"
+              placeholder=" "
+              value={password}
+              onChange={handlePasswordChange}
+              onKeyUp={validateFields}
+              required={!isLogin} // Le mot de passe est obligatoire uniquement en mode inscription
+            />
+            <label>Mot de passe</label>
+            {passwordError && !isLogin && <span className="error-message">Le mot de passe doit contenir au moins un chiffre et un caractère spécial</span>}
+          </div>
+          {isLogin && (
+            <div className="login-options">
+              <div className="remember-me">
+                <input
+                  type="checkbox"
+                  id="rememberMe"
+                  checked={rememberMe}
+                  onChange={handleRememberMeChange}
+                />
+                <label htmlFor="rememberMe">Se souvenir ?</label>
+              </div>
+                <a href="#" className='forgot-password'>Mot de passe oublié ?</a>
+            </div>
+          )}
+          <button type="submit" className="submit-btn">
+            {isLogin ? 'Se connecter' : 'S\'inscrire'}
+          </button>
+        </form>
+        <div className="toggle-action">
+          <p onClick={() => setIsLogin(!isLogin)}>
+            {isLogin ? 'Pas encore membre ? S\'inscrire' : 'Déjà membre ? Se connecter'}
+          </p>
+        </div>
       </div>
+      <div className="ellipse one"></div>
+      <div className="ellipse two"></div>
+      <div className="ellipse three"></div>
     </div>
   );
 }
