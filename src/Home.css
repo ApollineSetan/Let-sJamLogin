@@ -7,6 +7,16 @@
   font-family: 'Lato';
 }
 
+.main-content {
+  margin: 60px 270px; /* Ajuster pour la sidebar gauche */
+  margin-right: 370px; /* Ajuster pour la sidebar droite */
+  padding: 20px;
+  width: calc(100% - 620px); /* Ajuster la largeur totale pour tenir compte des deux sidebars */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -23,29 +33,29 @@ body {
     position: relative;
   }
   
-  /* Barre de recherche centrée */
   .search-bar {
     position: fixed;
     top: 0;
-    width: 100%;
-    max-width: 100%;
-    /* display: flex; */
+    left: 250px; /* Marge égale à la largeur de la sidebar gauche */
+    right: 350px; /* Marge égale à la largeur de la sidebar droite */
+    width: calc(100% - 600px); /* En tenant compte des deux sidebars */
+    display: flex;
     align-items: center;
     justify-content: center;
     background-color: transparent;
     z-index: 10;
     padding: 10px 20px;
-    gap: 10px; /* Espace entre les éléments */
   }
+
   
   .search-bar input {
-    width: 50%;
+    width: 100%;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 25px;
     outline: none;
-    background-color: transparent; /* Pas de fond */
+    background-color: transparent;
     color: #333;
   }
   
@@ -57,33 +67,36 @@ body {
   .back-button {
     background: none;
     border: none;
-    color: #333;
+    color: #ffffff;
     font-size: 24px;
     cursor: pointer;
     padding: 5px;
+    margin-right: 20px;
   }
   
   .back-button ion-icon {
-    font-size: 24px;
+    margin-top: 10px;
+    font-size: 30px;
   }
   
   /* Bouton notification */
   .notification-button {
     background: none;
     border: none;
-    color: #333;
+    color: #ffffff;
     font-size: 24px;
     cursor: pointer;
     padding: 5px;
+    margin-left: 20px;
   }
   
   .notification-button ion-icon {
-    font-size: 24px;
+    margin-top: 10px;
+    font-size: 30px;
   }
   
   /* Sidebar gauche */
   .sidebar {
-    width: 200px;
     background-color: #007bff;
     color: #fff;
     position: fixed;
@@ -94,11 +107,13 @@ body {
   }
   
   .left-sidebar {
+    width: 250px;
     left: 0;
   }
   
   .right-sidebar {
     right: 0;
+    width: 350px; /* Augmenter la largeur à 250px */
   }
   
   /* Liens dans la sidebar */
