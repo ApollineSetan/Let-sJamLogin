@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap'); 
 
 * {
   margin: 0;
@@ -7,161 +7,251 @@
   font-family: 'Lato';
 }
 
-.main-content {
-  margin: 60px 270px; /* Ajuster pour la sidebar gauche */
-  margin-right: 370px; /* Ajuster pour la sidebar droite */
+.home-page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  background-color: #000D26;
+  overflow: visible; 
+}
+
+.ellipseone, .ellipsesix {
+  width: 250px;
+  height: 250px;
+  left: 283px;
+  top: 96px;
+  position: absolute;
+  background: #E33E9F;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.ellipsetwo, .ellipseseven {
+  width: 311px;
+  height: 311px;
+  left: 45px;
+  top: 190px;
+  position: absolute;
+  background: #4D25AE;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.ellipsethree, .ellipseeight {
+  width: 250px;
+  height: 250px;
+  left: 139px;
+  top: 0px;
+  position: absolute;
+  background: #FE476E;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.ellipsefour, .ellipsenine {
+  width: 250px;
+  height: 250px;
+  left: 0px;
+  top: 90px;
+  position: absolute;
+  background: #FCACEE;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.ellipsefive, .ellipseten {
+  width: 166px;
+  height: 166px;
+  left: 374px;
+  top: 274px;
+  position: absolute;
+  background: #2155EC;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.premierGroupe, .deuxiemeGroupe {
+  width: 540px;
+  height: 501px;
+  position: absolute;
+  filter: blur(100px);
+  opacity: 1;
+  z-index: -1;
+}
+
+.premierGroupe {
+  left: 200px;
+  top: 200px;
+  filter: blur(110px);
+}
+
+.deuxiemeGroupe {
+  left: -917px;
+  top: -814px;
+}
+
+.search-bar {
+  position: fixed;
+  top: 0;
+  left: 250px;
+  right: 350px;
+  width: calc(100% - 600px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  z-index: 10;
+  padding: 30px 20px;
+}
+
+.search-bar input {
+  width: 90%;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid rgba(227, 62, 159, 0.25);
+  background: linear-gradient(rgba(2, 6, 23, 0.50), rgba(2, 6, 23, 0.50)) padding-box;
+  border-image: linear-gradient(to top, #E33E9F, #4D25AE) border-box;
+  border-radius: 50em;
+  padding-left: 25px;
+  color: white;
+  font-family: 'Lato';
+  font-weight: 500;
+}
+
+.search-bar input:focus {
+  border-color: #007bff;
+}
+
+.back-button,
+.notification-button {
+  background-color: transparent;
+  color: white;
+  width: 45px;
+  height: 38px;
+  border: solid 2px rgba(227, 62, 159, 0.25);
+  border-radius: 50%;
+  transform: translateY(1%);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.back-button:hover,
+.notification-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-button:active,
+.notification-button:active {
+  transform: scale(0.95);
+}
+
+.back-button ion-icon,
+.notification-button ion-icon {
+  font-size: 25px;
+}
+
+.logo {
+  padding: 0px 0 30px 65px;
+}
+
+.imagelogo {
+  width: 70px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
   padding: 20px;
-  width: calc(100% - 620px); /* Ajuster la largeur totale pour tenir compte des deux sidebars */
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.left-sidebar {
+  width: 250px;
+  background: rgb(2,6,23,0.50);
+  border: 1px solid rgba(227, 62, 159, 0.75);
+  backdrop-filter: 'blur(4px)';
+  left: 0;
+  color: white;
+}
+
+.right-sidebar {
+  right: 0;
+  width: 350px;
+  opacity: 0.50;
+  background: #333738;
+  border-left: 1px rgba(227, 62, 159, 0.75) solid;
+  border-top: 1px rgba(227, 62, 159, 0.75) solid;
+  border-bottom: 1px rgba(227, 62, 159, 0.75) solid;
+  color: white;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 20px 0 0 5px;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0.8
+}
+
+.sidebar li ion-icon {
+  font-size: 20px;
+  padding-right: 15px;
+  transform: translateY(10%);
+}
+
+.sidebar li:hover {
+  text-decoration: underline;
+}
+
+.top-links {
+  margin-bottom: 40px;
+  line-height: 1.8
+}
+
+.bottom-links {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.bottom-links ul {
+  margin-top: auto;
+}
+
+.bottom-links li {
+  margin-bottom: 10px;
+}
+
+.main-content {
+  margin: 60px 220px;
+  padding: 20px;
+  width: calc(100% - 440px);
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    position: relative;
-    overflow: hidden;
-    background-color: #000D26;
-  }
-  
-  .home-page {
-    display: flex;
-    width: 100%;
-    position: relative;
-  }
-  
-  .search-bar {
-    position: fixed;
-    top: 0;
-    left: 250px; /* Marge égale à la largeur de la sidebar gauche */
-    right: 350px; /* Marge égale à la largeur de la sidebar droite */
-    width: calc(100% - 600px); /* En tenant compte des deux sidebars */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    z-index: 10;
-    padding: 10px 20px;
-  }
-
-  
-  .search-bar input {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 25px;
-    outline: none;
-    background-color: transparent;
-    color: #333;
-  }
-  
-  .search-bar input:focus {
-    border-color: #007bff;
-  }
-  
-  /* Bouton flèche retour */
-  .back-button {
-    background: none;
-    border: none;
-    color: #ffffff;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 5px;
-    margin-right: 20px;
-  }
-  
-  .back-button ion-icon {
-    margin-top: 10px;
-    font-size: 30px;
-  }
-  
-  /* Bouton notification */
-  .notification-button {
-    background: none;
-    border: none;
-    color: #ffffff;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 5px;
-    margin-left: 20px;
-  }
-  
-  .notification-button ion-icon {
-    margin-top: 10px;
-    font-size: 30px;
-  }
-  
-  /* Sidebar gauche */
-  .sidebar {
-    background-color: #007bff;
-    color: #fff;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    padding: 20px;
-    overflow-y: auto;
-  }
-  
-  .left-sidebar {
-    width: 250px;
-    left: 0;
-  }
-  
-  .right-sidebar {
-    right: 0;
-    width: 350px; /* Augmenter la largeur à 250px */
-  }
-  
-  /* Liens dans la sidebar */
-  .sidebar ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .sidebar li {
-    margin: 20px 0;
-    font-size: 18px;
-    cursor: pointer;
-  }
-  
-  .sidebar li:hover {
-    text-decoration: underline;
-  }
-  
-  /* Séparation des liens en haut et en bas */
-  .top-links {
-    margin-bottom: 40px; /* Espacement entre les deux sections */
-  }
-  
-  .bottom-links {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-  }
-  
-  .bottom-links ul {
-    margin-top: auto; /* Place les liens en bas */
-  }
-  
-  .bottom-links li {
-    margin-bottom: 10px;
-  }
-  
-  /* Contenu principal */
-  .main-content {
-    margin: 60px 220px; /* Gère l'espacement avec les sidebars */
-    padding: 20px;
-    width: calc(100% - 440px); /* Réduit la largeur pour tenir compte des 2 sidebars */
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .main-content p {
-    color: #666;
-    line-height: 1.6;
-  }
+.main-content p {
+  color: #666;
+  line-height: 1.6;
+}
