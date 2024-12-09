@@ -1,21 +1,18 @@
 import React from 'react';
-// import Login from './Login';
-// import './Login.css';
-import Home from './Home';
-import './Home.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <Login /> {/* Utilisation du composant Login ici */}
-//     </div>
-//   );
-// }
+import LeftSideBar from './Components/LeftSideBar';
+import RightSideBar from './Components/RightSideBar';
+import TopBar from './Components/TopBar';
+import ProfileDemos from './Components/ProfileDemos';
+import Login from './Login/Login';
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      <LeftSideBar />
+      <RightSideBar />
+      <TopBar />
+      <ProfileDemos />
+      <Login />
     </div>
   );
 }
