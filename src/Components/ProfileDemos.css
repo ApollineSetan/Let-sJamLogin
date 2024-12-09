@@ -1,0 +1,83 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    background-color: #000D26;
+    overflow: visible; 
+  }
+  
+  .ellipseone, .ellipsesix {
+    width: 250px;
+    height: 250px;
+    left: 283px;
+    top: 96px;
+    position: absolute;
+    background: #E33E9F;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .ellipsetwo, .ellipseseven {
+    width: 311px;
+    height: 311px;
+    left: 45px;
+    top: 190px;
+    position: absolute;
+    background: #4D25AE;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .ellipsethree, .ellipseeight {
+    width: 250px;
+    height: 250px;
+    left: 139px;
+    top: 0px;
+    position: absolute;
+    background: #FE476E;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .ellipsefour, .ellipsenine {
+    width: 250px;
+    height: 250px;
+    left: 0px;
+    top: 90px;
+    position: absolute;
+    background: #FCACEE;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .ellipsefive, .ellipseten {
+    width: 166px;
+    height: 166px;
+    left: 374px;
+    top: 274px;
+    position: absolute;
+    background: #2155EC;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .premierGroupe, .deuxiemeGroupe {
+    position: absolute;
+    width: 540px;
+    height: 501px;
+    filter: blur(150px);
+    opacity: 1;
+    z-index: -1;
+  }
+  
+  /* .premierGroupe {
+    left: -100px;
+    top: -150px;
+  }
+  
+  .deuxiemeGroupe {
+    left: 800px;
+    top: 600px;
+  } */

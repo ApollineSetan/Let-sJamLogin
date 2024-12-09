@@ -1,0 +1,16 @@
+.rightside {
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  box-sizing: border-box;
+  background-color: rgba(13, 4, 50, 0.1); /* Transparence avec 10% d'opacité */
+  backdrop-filter: blur(10px); /* Applique un flou au fond derrière la sidebar */
+  border-left: 1px solid transparent; /* Ajuste si besoin la bordure pour plus de style */
+  border-image: linear-gradient(to bottom, #E33E9F, #4D25AE) 1;
+  z-index: 2;
+}

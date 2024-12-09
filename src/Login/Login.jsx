@@ -1,3 +1,7 @@
+// Ce composant gère l'interface de connexion et d'inscription. Il utilise des états
+// pour gérer l'affichage des champs de formulaire et les erreurs de validation.
+
+
 import React, { useState } from 'react';
 import './Login.css';
 

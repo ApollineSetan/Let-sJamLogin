@@ -1,0 +1,67 @@
+.topbar {
+    width: calc(100% - 450px); /* On calcule la largeur en tenant compte des deux sidebars (200px pour la gauche, 250px pour la droite) */
+    height: 50px;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 200px; /* Espace pour la LeftSidebar */
+    right: 250px; /* Espace pour la RightSidebar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Espacement interne pour les boutons et le champ de recherche */
+    box-sizing: border-box; /* Inclut les marges dans la largeur */
+    z-index: 1000; /* La TopBar doit être visible au-dessus du contenu */
+  }
+
+  .topbar ::placeholder {
+    color: rgb(255, 255, 255, 50%);
+  }
+
+  .topbar input {
+    width: 600px;
+    padding: 10px 25px;
+    margin-top: 50px;
+    font-size: 15px;
+    border: 1px solid rgba(227, 62, 158, 0.415);
+    background: linear-gradient(rgba(2, 6, 23, 0.50), rgba(2, 6, 23, 0.50)) padding-box;
+    border-radius: 50em;
+    color: rgb(255, 255, 255);
+    font-family: 'Lato';
+    font-weight: 500;
+  }
+
+  
+  .search-bar input:focus {
+    border-color: #007bff;
+  }
+  
+  .topbar button {
+    background : linear-gradient(180deg, rgba(227, 62, 159, 0.25) 0%, rgba(77, 37, 174, 0.25) 100%);
+    border: 1px solid #4D25AE;
+    color: rgb(255, 255, 255, 50%);
+    font-size: 16px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin-top: 50px;
+    margin-left: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+  
+  .topbar button:hover {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #ffffff;
+  }
+  
+  
+  .topbar input:focus {
+    border-color: #E33E9F; /* Couleur de la bordure quand on clique sur l'input */
+  }
+  
+  

@@ -1,3 +1,6 @@
+// Ce fichier est le point d'entrée principal de l'application Electron. 
+// Il crée la fenêtre de l'application et gère son comportement.
+
 const path = require('path');
 const { app, BrowserWindow } = require('electron');
 const electronReload = require('electron-reload');

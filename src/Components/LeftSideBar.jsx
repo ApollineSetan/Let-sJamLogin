@@ -1,13 +1,60 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './LeftSideBar.css';
+import { FaHome, FaUser, FaEnvelope, FaUsers, FaFile, FaCog, FaFileAlt, FaSignOutAlt } from 'react-icons/fa';
 
 const LeftSidebar = () => {
+  const [activePage, setActivePage] = useState('accueil'); // Par défaut "accueil"
+
+  // Liste des pages avec leurs noms et icônes
+  const menuItems = [
+    { name: 'accueil', label: 'Accueil', icon: <FaHome /> },
+    { name: 'monProfil', label: 'Mon profil', icon: <FaUser /> },
+    { name: 'messagerie', label: 'Messagerie', icon: <FaEnvelope /> },
+    { name: 'monReseau', label: 'Mon réseau', icon: <FaUsers /> },
+    { name: 'mesGroupes', label: 'Mes groupes', icon: <FaUsers /> },
+    { name: 'enregistrements', label: 'Enregistrements', icon: <FaFile /> },
+  ];
+
+  const settingsItems = [
+    { name: 'parametres', label: 'Paramètres', icon: <FaCog /> },
+    { name: 'conditions', label: 'Conditions générales', icon: <FaFileAlt /> },
+    { name: 'deconnexion', label: 'Se déconnecter', icon: <FaSignOutAlt /> },
+  ];
+
   return (
-    <div style={{ width: '250px', height: '100vh', backgroundColor: '#f5f5f5', position: 'fixed', left: 0, top: 0 }}>
-      <ul>
-        <li>Menu Item 1</li>
-        <li>Menu Item 2</li>
-        <li>Menu Item 3</li>
-      </ul>
+    <div className="sidebar">
+      <div className="logo">
+        {/* Ajoute ton logo ici */}
+        <img src="images\logomusic-removebg-preview.png" alt="Logo" />
+      </div>
+
+      {/* Menu principal */}
+      <div className="menu">
+        {menuItems.map(item => (
+          <div
+            key={item.name}
+            className={`menu-item ${activePage === item.name ? 'active' : ''}`}
+            onClick={() => setActivePage(item.name)}
+          >
+            <span className="menu-icon">{item.icon}</span> {/* Icône à gauche */}
+            <span>{item.label}</span>
+          </div>
+        ))}
+      </div>
+
+      {/* Menu secondaire */}
+      <div className="bottom-menu">
+        {settingsItems.map(item => (
+          <div
+            key={item.name}
+            className={`menu-item ${activePage === item.name ? 'active' : ''}`}
+            onClick={() => setActivePage(item.name)}
+          >
+            <span className="menu-icon">{item.icon}</span> {/* Icône à gauche */}
+            <span>{item.label}</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
