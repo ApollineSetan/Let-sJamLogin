@@ -5,7 +5,9 @@
 }
 
 .sidebar {
-  width: 200px;
+  width: 15%;
+  min-width: 200px;
+  max-width: 300px;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -37,215 +39,38 @@
   cursor: pointer;
   transition: all 0.3s ease;
   margin-bottom: 10px;
+  width: 100%; /* Assure que l'élément occupe toute la largeur disponible */
+  box-sizing: border-box; /* Inclut les paddings et marges dans la largeur totale */
+  overflow: hidden; /* Empêche l'élément de se déborder */
 }
 
 .menu-icon {
   margin-right: 15px;
   font-size: 17px;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .menu-item:hover .menu-icon {
-  font-size: 20px; /* Taille agrandie lors du survol */
-  color: #FE476E; /* Change la couleur au survol pour correspondre au style général */
+  font-size: 20px;
+  color: #FE476E;
+  transform: scale(1.1);
 }
-
-
 
 .menu-item:hover {
   font-size: 14px;
+  transform: scale(1.05);
 }
 
-.menu-item.active span {
+.menu-item.active {
   font-size: 14px;
-  text-shadow: 0px 2px 4px #000000;
-  color: rgb(255, 255, 255, 100%);
+  transform: scale(1.05);
+  color: rgba(255, 255, 255, 1);
 }
 
 .menu-item.active .menu-icon {
-  color: #FE476E; /* Couleur des icônes actives */
+  color: #FE476E;
 }
-
 
 .bottom-menu {
   margin-top: auto;
 }
-
-.menu-item.active {
-  transform: scale(1.05);  /* Un petit effet de zoom */
-}
-
-
-
-
-/* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap'); 
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Lato';
-}
-
-.home-page {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  z-index: -1;
-}
-
-.search-bar {
-  position: fixed;
-  top: 0;
-  left: 250px;
-  right: 350px;
-  width: calc(100% - 600px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: transparent;
-  z-index: 10;
-  padding: 30px 20px;
-}
-
-.search-bar input {
-  width: 90%;
-  padding: 10px;
-  font-size: 15px;
-  border: 1px solid rgba(227, 62, 159, 0.25);
-  background: linear-gradient(rgba(2, 6, 23, 0.50), rgba(2, 6, 23, 0.50)) padding-box;
-  border-image: linear-gradient(to top, #E33E9F, #4D25AE) border-box;
-  border-radius: 50em;
-  padding-left: 25px;
-  color: white;
-  font-family: 'Lato';
-  font-weight: 500;
-}
-
-.search-bar input:focus {
-  border-color: #007bff;
-}
-
-.back-button,
-.notification-button {
-  background-color: transparent;
-  color: white;
-  width: 45px;
-  height: 38px;
-  border: solid 2px rgba(227, 62, 159, 0.25);
-  border-radius: 50%;
-  transform: translateY(1%);
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 8px 6px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.back-button:hover,
-.notification-button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-}
-
-.back-button:active,
-.notification-button:active {
-  transform: scale(0.95);
-}
-
-.back-button ion-icon,
-.notification-button ion-icon {
-  font-size: 25px;
-}
-
-.logo {
-  padding: 0px 0 30px 65px;
-}
-
-.imagelogo {
-  width: 70px;
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  padding: 20px;
-  overflow-y: auto;
-  z-index: 10;
-}
-
-.left-sidebar {
-  width: 250px;
-  background: rgb(2,6,23,0.50);
-  border: 1px solid rgba(227, 62, 159, 0.75);
-  backdrop-filter: 'blur(4px)';
-  left: 0;
-  color: white;
-}
-
-.right-sidebar {
-  right: 0;
-  width: 350px;
-  opacity: 0.50;
-  background: #333738;
-  border-left: 1px rgba(227, 62, 159, 0.75) solid;
-  border-top: 1px rgba(227, 62, 159, 0.75) solid;
-  border-bottom: 1px rgba(227, 62, 159, 0.75) solid;
-  color: white;
-}
-
-.sidebar ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.sidebar li {
-  margin: 20px 0 0 5px;
-  font-size: 18px;
-  cursor: pointer;
-  opacity: 0.8
-}
-
-.sidebar li ion-icon {
-  font-size: 20px;
-  padding-right: 15px;
-  transform: translateY(10%);
-}
-
-.sidebar li:hover {
-  text-decoration: underline;
-}
-
-.top-links {
-  margin-bottom: 40px;
-  line-height: 1.8
-}
-
-.bottom-links {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-}
-
-.bottom-links ul {
-  margin-top: auto;
-}
-
-.bottom-links li {
-  margin-bottom: 10px;
-}
-
-.main-content {
-  margin: 60px 220px;
-  padding: 20px;
-  width: calc(100% - 440px);
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.main-content p {
-  color: #666;
-  line-height: 1.6;
-} */

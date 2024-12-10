@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './LeftSideBar.css';
 import { FaHome, FaUser, FaEnvelope, FaUsers, FaFile, FaCog, FaFileAlt, FaSignOutAlt } from 'react-icons/fa';
+import { BiNetworkChart } from 'react-icons/bi';
+
 
 const LeftSidebar = () => {
   const [activePage, setActivePage] = useState('accueil'); // Par défaut "accueil"
@@ -10,7 +12,7 @@ const LeftSidebar = () => {
     { name: 'accueil', label: 'Accueil', icon: <FaHome /> },
     { name: 'monProfil', label: 'Mon profil', icon: <FaUser /> },
     { name: 'messagerie', label: 'Messagerie', icon: <FaEnvelope /> },
-    { name: 'monReseau', label: 'Mon réseau', icon: <FaUsers /> },
+    { name: 'monReseau', label: 'Mon réseau', icon: <BiNetworkChart /> },
     { name: 'mesGroupes', label: 'Mes groupes', icon: <FaUsers /> },
     { name: 'enregistrements', label: 'Enregistrements', icon: <FaFile /> },
   ];

@@ -5,7 +5,7 @@ body {
     min-height: 100vh;
     position: relative;
     background-color: #000D26;
-    overflow: visible; 
+    overflow: hidden; 
   }
   
   .ellipseone, .ellipsesix {
@@ -72,12 +72,28 @@ body {
     z-index: -1;
   }
   
-  /* .premierGroupe {
+  .premierGroupe {
     left: -100px;
     top: -150px;
   }
   
   .deuxiemeGroupe {
-    left: 800px;
-    top: 600px;
-  } */
+    left: 1500px;
+    top: 800px;
+  }
+
+  @media (max-width: 768px) {
+    .leftside, .rightside {
+      width: 25%;
+    }
+  
+    .topbar {
+      width: calc(100% - 50%);
+      left: 25%;
+      right: 25%;
+    }
+  
+    .topbar input {
+      max-width: 400px;
+    }
+  }
